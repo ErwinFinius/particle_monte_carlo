@@ -1,3 +1,4 @@
+Look into manual.txt for more information: 
 This is manual for converter program
 
 Functionality: This script takes in a json and RAW data file, perform resampling on particle based on systematic and stratified scheme, plot the outputted distribution, and return two SDDS files corresponding for each RAW for simulations. 
@@ -25,12 +26,12 @@ If any additional and mischellaneous issues occured, one debug it oneself as rom
 
 The hierarchy of the file should be 
 Current_directory >
-	Neuestecon.py
-	DATA_FOLDER > 
+	~Neuestecon.py
+	~DATA_FOLDER > 
 		~Json_file 
 		~RAW  > 
 			~input1.h5 
-		    ~input2.h5
+		    	~input2.h5
 		        ...
 
 
