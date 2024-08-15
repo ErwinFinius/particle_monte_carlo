@@ -9,25 +9,29 @@ User need to input: A folder name of the data folder and number of particles wis
 
 IMPORTANT: Json files and Folder of RAW data files should be in the same directory i.e.the data folder which user supply the name. The name of the RAW data folder must be named 'RAW' and the json file must end with '.json'. 
 
-The program was named 'Neuercon' because there was an older version named 'Newcon' for a RAW to CSV converter and this is a even newer version of such converter now with graphics. 
+The program was named 'Neuercon' because there was an older version named 'Newcon' for a RAW to CSV converter and this is a even newer version of such converter now with graphics. After several update, it is now coined the name 'Neuestecon'. 
 
 The programs comes with methods that ensures file type checking at each step, look for the messages in terminal to better diagnose. Common errors could be Ascii-reading or incorrect file content. 
 
 The program has an open mind, it will take a folder of any file type and only process those with ending '.h5' and will inform you that it has skipped those what's not of this form for you to reflect on why you are feeding it non-raw data file despite the fact that it says 'RAW data folder'
 
-The program aumatically creates a folder named 'sdds_files' inside the given raw data folder to store all output files. 
+The program aumatically creates a folder named 'sdds_files' inside the given data data folder to store all output files. 
 
 The program can help you graph a particular individual resampled RAW file one at a time if user supply the file name in the folder(e.g. 'RAW-driver-000000.h5') and terminates if user entered ''(return), as plotting all of them resulting in arbitatrily many pop-up window graphs will be excessive. 
 
 The outputted SDDS files has names: 'output{j}{x}.sdds' with integer j is indexing from 0 to number of .h5 files in your folder and x is binary(1 or 0) with 0 corresponding systemaitcally resampled SDDS and 1 corresponding to stratified resampled SDDS. e.g. the first raw data file generates two SDDS: 'output00.sdds' and 'output01.sdds' the former is systematic and the latter is stratified. 
 
-The hierarchy of the file should be 
+If any additional and mischellaneous issues occured, one debug it oneself as rome was not built in a day and one's own work can only be perfected upon by the striving of his peers. 
 
-DATA_FOLDER > 
-~Json_file 
-~RAW        > ~input1.h5 
-	          ~input2.h5
-	             ...
+The hierarchy of the file should be 
+Current_directory >
+	Neuestecon.py
+	DATA_FOLDER > 
+		~Json_file 
+		~RAW  > 
+			~input1.h5 
+		    ~input2.h5
+		        ...
 
 
 example implementation could be the following: 
